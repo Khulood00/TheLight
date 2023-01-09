@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  TheLight
+
+  Created by Khulood Alhamed on 09/01/2023.
+  
+*/
+
+"Schedule time to exercise" = "حدد وقت ممارسة الرياضة";
+"Evning   " = "المساء";
+"Morning" = "الصباح";

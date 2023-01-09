@@ -11,6 +11,8 @@
 		A8536944296AB5830066912B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8536943296AB5830066912B /* ContentView.swift */; };
 		A8536946296AB5850066912B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8536945296AB5850066912B /* Assets.xcassets */; };
 		A853694A296AB5850066912B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8536949296AB5850066912B /* Preview Assets.xcassets */; };
+		A8536951296B45FC0066912B /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8536950296B45FC0066912B /* Main.swift */; };
+		A8536956296BFDDA0066912B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A8536958296BFDDA0066912B /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		A8536945296AB5850066912B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8536947296AB5850066912B /* TheLight.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TheLight.entitlements; sourceTree = "<group>"; };
 		A8536949296AB5850066912B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A8536950296B45FC0066912B /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		A8536959296BFE240066912B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +58,11 @@
 			children = (
 				A8536941296AB5830066912B /* TheLightApp.swift */,
 				A8536943296AB5830066912B /* ContentView.swift */,
+				A8536950296B45FC0066912B /* Main.swift */,
 				A8536945296AB5850066912B /* Assets.xcassets */,
 				A8536947296AB5850066912B /* TheLight.entitlements */,
 				A8536948296AB5850066912B /* Preview Content */,
+				A8536958296BFDDA0066912B /* Localizable.strings */,
 			);
 			path = TheLight;
 			sourceTree = "<group>";
@@ -111,6 +117,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = A8536935296AB5830066912B;
 			productRefGroup = A853693F296AB5830066912B /* Products */;
@@ -128,6 +135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A853694A296AB5850066912B /* Preview Assets.xcassets in Resources */,
+				A8536956296BFDDA0066912B /* Localizable.strings in Resources */,
 				A8536946296AB5850066912B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,12 +147,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8536951296B45FC0066912B /* Main.swift in Sources */,
 				A8536944296AB5830066912B /* ContentView.swift in Sources */,
 				A8536942296AB5830066912B /* TheLightApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A8536958296BFDDA0066912B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A8536959296BFE240066912B /* ar */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		A853694B296AB5850066912B /* Debug */ = {
