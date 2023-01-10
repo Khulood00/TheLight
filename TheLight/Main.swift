@@ -53,7 +53,7 @@ struct Main: View {
                         }
                     }
                 }
-                    
+        
                 }.accentColor(.black)
                     .font(.title3)
                     .padding(.trailing, 20)
