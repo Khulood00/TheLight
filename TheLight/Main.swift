@@ -12,12 +12,30 @@ struct Main: View {
     @State var currentTime = Date()
     @State var currentTime2 = Date()
     
+    @State var isNight = true
+    
+    init(currentTime: Date = Date(), currentTime2: Date = Date(), isNight: Bool = true) {
+        self.currentTime = currentTime
+        self.currentTime2 = currentTime2
+        self.isNight = isNight
+        
+        let currentDate = Date()
+        
+        let dateFormatter = DateFormatter()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "a"
+        let dateString = formatter.string(from: Date())
+        
+    }
+    
     var body: some View {
         
         NavigationView{
             ZStack(alignment: .top){
                 
-                Image("nightBackground")
+                Image(isNight ? "nightBackground" : "morningBackground")
+                
+                
                     .ignoresSafeArea()
                     .scaledToFill()
                 
@@ -69,7 +87,6 @@ struct Main: View {
                     .padding(.top, 100)
                     .opacity(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/)
             }
-            
         }
     }
 }
