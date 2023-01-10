@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A2B08C4B296D483B00CE0AC9 /* Omnya.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B08C4A296D483B00CE0AC9 /* Omnya.swift */; };
+		A2B08C4D296D488100CE0AC9 /* AllModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B08C4C296D488100CE0AC9 /* AllModifiers.swift */; };
+		A2B08C50296D48FA00CE0AC9 /* 10secMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A2B08C4F296D48F900CE0AC9 /* 10secMusic.mp3 */; };
+		A2B08C52296D4C3C00CE0AC9 /* 1minMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A2B08C51296D4C3C00CE0AC9 /* 1minMusic.mp3 */; };
 		A8536942296AB5830066912B /* TheLightApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8536941296AB5830066912B /* TheLightApp.swift */; };
 		A8536944296AB5830066912B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8536943296AB5830066912B /* ContentView.swift */; };
 		A8536946296AB5850066912B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8536945296AB5850066912B /* Assets.xcassets */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A2B08C4A296D483B00CE0AC9 /* Omnya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Omnya.swift; sourceTree = "<group>"; };
+		A2B08C4C296D488100CE0AC9 /* AllModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllModifiers.swift; sourceTree = "<group>"; };
+		A2B08C4F296D48F900CE0AC9 /* 10secMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 10secMusic.mp3; sourceTree = "<group>"; };
+		A2B08C51296D4C3C00CE0AC9 /* 1minMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1minMusic.mp3; sourceTree = "<group>"; };
 		A853693E296AB5830066912B /* TheLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8536941296AB5830066912B /* TheLightApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheLightApp.swift; sourceTree = "<group>"; };
 		A8536943296AB5830066912B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -37,6 +45,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A2B08C4E296D489500CE0AC9 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				A2B08C4F296D48F900CE0AC9 /* 10secMusic.mp3 */,
+				A2B08C51296D4C3C00CE0AC9 /* 1minMusic.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		A8536935296AB5830066912B = {
 			isa = PBXGroup;
 			children = (
@@ -56,9 +73,12 @@
 		A8536940296AB5830066912B /* TheLight */ = {
 			isa = PBXGroup;
 			children = (
+				A2B08C4E296D489500CE0AC9 /* Sounds */,
 				A8536941296AB5830066912B /* TheLightApp.swift */,
 				A8536943296AB5830066912B /* ContentView.swift */,
 				A8536950296B45FC0066912B /* Main.swift */,
+				A2B08C4A296D483B00CE0AC9 /* Omnya.swift */,
+				A2B08C4C296D488100CE0AC9 /* AllModifiers.swift */,
 				A8536945296AB5850066912B /* Assets.xcassets */,
 				A8536947296AB5850066912B /* TheLight.entitlements */,
 				A8536948296AB5850066912B /* Preview Content */,
@@ -136,7 +156,9 @@
 			files = (
 				A853694A296AB5850066912B /* Preview Assets.xcassets in Resources */,
 				A8536956296BFDDA0066912B /* Localizable.strings in Resources */,
+				A2B08C52296D4C3C00CE0AC9 /* 1minMusic.mp3 in Resources */,
 				A8536946296AB5850066912B /* Assets.xcassets in Resources */,
+				A2B08C50296D48FA00CE0AC9 /* 10secMusic.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,8 +169,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2B08C4D296D488100CE0AC9 /* AllModifiers.swift in Sources */,
 				A8536951296B45FC0066912B /* Main.swift in Sources */,
 				A8536944296AB5830066912B /* ContentView.swift in Sources */,
+				A2B08C4B296D483B00CE0AC9 /* Omnya.swift in Sources */,
 				A8536942296AB5830066912B /* TheLightApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,7 +309,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TheLight/Preview Content\"";
-				DEVELOPMENT_TEAM = G8T8U6P69R;
+				DEVELOPMENT_TEAM = Z6KZNQG7LM;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -323,7 +347,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TheLight/Preview Content\"";
-				DEVELOPMENT_TEAM = G8T8U6P69R;
+				DEVELOPMENT_TEAM = Z6KZNQG7LM;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

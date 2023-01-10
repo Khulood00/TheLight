@@ -11,7 +11,8 @@ import SwiftUI
 struct TheLightApp: App {
     var body: some Scene {
         WindowGroup {
-            Main()
+            //Main()
+            Omnya()
         }
     }
 }
