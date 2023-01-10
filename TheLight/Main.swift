@@ -6,22 +6,21 @@
 //
 
 import SwiftUI
+import UserNotifications
 
 struct Main: View {
     @State var currentTime = Date()
     @State var currentTime2 = Date()
-
+    
     var body: some View {
         
         NavigationView{
             ZStack(alignment: .top){
                 
-                   
-                        Image("nightBackground")
-                            .ignoresSafeArea()
-                            .scaledToFill()
-                       
-                    
+                Image("nightBackground")
+                    .ignoresSafeArea()
+                    .scaledToFill()
+                
                 VStack(alignment: .center, spacing: 10){
                     
                     DisclosureGroup{
@@ -32,12 +31,12 @@ struct Main: View {
                                 DatePicker("", selection: $currentTime,displayedComponents: .hourAndMinute)
                                     .labelsHidden()
                                     .accentColor(.blue)
-                            
+                                
                             }
                             HStack{
                                 Image(systemName: "moon.fill")
                                 Text("Evning   ")
-                                   
+                                
                                 DatePicker("", selection: $currentTime2,displayedComponents: .hourAndMinute)
                                     .labelsHidden()
                                     .accentColor(.blue)
@@ -52,10 +51,7 @@ struct Main: View {
                             Text("Schedule time to exercise")
                             
                         }
-                        
                     }
-                    
-                    
                 }
                     
                 }.accentColor(.black)
@@ -72,17 +68,16 @@ struct Main: View {
                     .padding(.trailing)
                     .padding(.top, 100)
                     .opacity(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/)
-                }
-                
-    
             }
+            
         }
     }
-    
-    struct Main_Previews: PreviewProvider {
-        static var previews: some View {
-            Main()
-        }
+}
+
+struct Main_Previews: PreviewProvider {
+    static var previews: some View {
+        Main()
     }
-    
+}
+
 

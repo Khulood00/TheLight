@@ -10,24 +10,11 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
 
-        GeometryReader{ geo in
-            ZStack
-            {
-                Image("nightBackground")
-                    .edgesIgnoringSafeArea(.all)
-                    .scaledToFill()
-                    .frame(width: geo.size.width, height: geo.size.height)
-                
-                    
-                    
-                    
-            
-                
-            }
+       Text("Hi")
+        
         }
-
     }
-}
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
