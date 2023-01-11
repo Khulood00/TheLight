@@ -10,6 +10,18 @@
 "Evning   " = "المساء";
 "Morning" = "الصباح";
 "Tab to start"="اضغط للبدء";
-"Done!"="انتهيت!";
-"Have a nice day"="يوماً سعيداً";
+"Done!" = "انتهيت!";
+"Have a nice day" = " يوماً سعيداً";
+"Excercise" = "تمرين";
+/* Excercises instructions used only for voice over */
+"Exercise Sitting on the floor, bend knees and open them out to the side and the soles of your feet together" = "الجلوس على الأرض ، وثني الركبتين وافتحهما على الجانب وباطن قدميك معًا";
+"Exercise Stand with your legs side by side and bend the upper part so that your chest is touching your thighs and your arms are wrapped around your knees" = "قف و ساقيك جنباً الى جنب و احني الجزء العلوي حتي يكون صدرك ملامس لفخذيك و ذراعيك ملفوفة حول ركبتيك";
+"Exercise Stand with your legs side by side, then raise one foot to touch the knee of the other leg" = "قف و قدميك جنباً الى جنب ثم ارفع ساق واحدة لتكون ملامسة لركبة الساق الاخرى";
+"Exercise Lie on the floor and bend your knees towards the top while your feet on the floor" = "استلقي على الارض و قم بثني ركبتيك باتجاه الاعلى بينما قدميك ثابته على الارض";
+"Exercise Stand on the floor and bend the upper part to till your hands touch the floor" = "قف على الارض و احني الجزء العلوي لتجعل يديك ملامسة للأرض";
+"Exercise Sit on the floor, bend one knee, straighten the other leg to the side, and extend one arm towards the straight leg" = "اجلس على الارض و اثني ركبة واحدة و قم بفرد الساق الاخرى جانباً و افرد ذراع واحد باتجاه الساق الممدودة";
+"Exercise Stand on the floor and bend one of your knees forward with your feet on the ground and straighten the other leg towards the back while your stretching your arms forward and backward" = "قف على الارض و قم بثنى احد ركبتيك للامام مثبتاً قدميك على الارض و افرد الساق الاخرى ناحية الخلف مع فرد ذراعيك للأمام و الخلف";
+"Exercise Stand on the floor using one leg and raise other one with your knee bent and straighten one of your arms and bend the other to make it touch your hip" ="قف على الارض باستخدام ساق واحدة وقم برفع الاخرى مع ثنى ركبتك و افرد احد ذراعيك و اثني الاخر لجعله ملامس لوركك";
+"Exercise Stand on the floor with one leg and bent the other one backward, holding your foot with one hand and the other one straight forward" = "قف على الارض باستخدام ساق واحدة وقم بثني الأخرى للخلف ممسكاً قدمك باحدى يديك و الاخرى مفرودة للأمام";
+"Exercise Lie facing the floor and place your elbows on the floor to raise your body while your toes touching the floor" = "استلق مواجهاً الأرض و قم بتثبيت كوعيك علي الارض لرفع جسمك مع جعل اصابع قدمك ملامسة للارض";
 
