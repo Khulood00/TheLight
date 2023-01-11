@@ -9,7 +9,7 @@ import SwiftUI
 struct TheEndTextModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .bold()
+       //     .bold()
             .font(.system(size: 28))
             .foregroundColor(.black)
             .frame(width: 300.0)
@@ -28,7 +28,7 @@ struct TimerModifier: ViewModifier {
 struct StartTextModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .bold()
+      //      .bold()
             .font(.system(size: 28))
             .foregroundColor(.black)
             .frame(width: 200.0, height: 200.0)

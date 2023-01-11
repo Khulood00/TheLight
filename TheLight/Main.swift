@@ -6,27 +6,42 @@
 //
 
 import SwiftUI
+// Local notification
 import UserNotifications
 
+class NotificationManager{
+    static let instance = NotificationManager()
+   
+    func scheduleNotification(hour: Int,minute: Int){
+        
+        let center = UNUserNotificationCenter.current()
+        
+        let options: UNAuthorizationOptions = [.alert, .sound, .badge]
+        center.requestAuthorization(options: options) { (success, error)in
+            guard error != nil else { return }
+        }
+        let content = UNMutableNotificationContent()
+        content.title = "Flexy"
+        content.subtitle = "It's your stretching time!"
+        content.sound = .default
+        content.badge = 0
+        
+        var dateComponents = DateComponents()
+        dateComponents.hour = hour
+        dateComponents.minute = minute
+        
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+        
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        center.add(request)
+    }
+}
+// Local notification end
+
 struct Main: View {
-    @State var currentTime = Date()
-    @State var currentTime2 = Date()
-    
+    @State var currentTimeA = Date()
     @State var isNight = true
     
-    init(currentTime: Date = Date(), currentTime2: Date = Date(), isNight: Bool = true) {
-        self.currentTime = currentTime
-        self.currentTime2 = currentTime2
-        self.isNight = isNight
-        
-        let currentDate = Date()
-        
-        let dateFormatter = DateFormatter()
-        let formatter = DateFormatter()
-        formatter.dateFormat = "a"
-        let dateString = formatter.string(from: Date())
-        
-    }
     
     var body: some View {
         
@@ -34,8 +49,6 @@ struct Main: View {
             ZStack(alignment: .top){
                 
                 Image(isNight ? "nightBackground" : "morningBackground")
-                
-                
                     .ignoresSafeArea()
                     .scaledToFill()
                 
@@ -46,7 +59,7 @@ struct Main: View {
                             HStack{
                                 Image(systemName: "sun.max.fill")
                                 Text("Morning")
-                                DatePicker("", selection: $currentTime,displayedComponents: .hourAndMinute)
+                                DatePicker("", selection: $currentTimeA,displayedComponents: .hourAndMinute)
                                     .labelsHidden()
                                     .accentColor(.blue)
                                 
@@ -55,23 +68,36 @@ struct Main: View {
                                 Image(systemName: "moon.fill")
                                 Text("Evning   ")
                                 
-                                DatePicker("", selection: $currentTime2,displayedComponents: .hourAndMinute)
+                                DatePicker("", selection: $currentTimeA,displayedComponents: .hourAndMinute)
                                     .labelsHidden()
                                     .accentColor(.blue)
                             }
+                            Button("Schedule Notification"){
+                                let components = Calendar.current.dateComponents([.hour , .minute], from: currentTimeA)
+                                
+                                // print(selectedDate)
+                                let hours = components.hour ?? 0
+                                let minute = components.minute ?? 0
+                                // print(hours)
+                                // print(minute)
+                                
+                                NotificationManager.instance.scheduleNotification(hour: hours, minute: minute)
+                                
+                            } .buttonStyle(.bordered)
+                            
+                            
                         }.padding(.top, 20)
-                        
                     }
                 label: {
                     VStack{
                         HStack{
-                            
                             Text("Schedule time to exercise")
-                            
                         }
                     }
                 }
-        
+                .onAppear{
+                    UIApplication.shared.applicationIconBadgeNumber = 0
+                }
                 }.accentColor(.black)
                     .font(.title3)
                     .padding(.trailing, 20)
@@ -86,7 +112,38 @@ struct Main: View {
                     .padding(.trailing)
                     .padding(.top, 100)
                     .opacity(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/)
+                
+                
+                
+                VStack{
+                    Omnya()
+                }.padding(.top, 315)
             }
+        }.onAppear{
+            checkTime ()
+        }
+    }
+    
+    func checkTime ()
+    {
+        self.currentTimeA = Date()
+        self.isNight = isNight
+        
+        let currentDate = Date()
+        let dateFormatter = DateFormatter()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "a"
+        let dateString = formatter.string(from: Date())
+        print("the time now is \(dateString)")
+        
+        if dateString == "AM"
+        {
+            self.isNight = false
+            
+        }
+        else
+        {
+            self.isNight = true
         }
     }
 }
@@ -96,5 +153,3 @@ struct Main_Previews: PreviewProvider {
         Main()
     }
 }
-
-

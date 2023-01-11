@@ -12,7 +12,7 @@ struct TheLightApp: App {
     var body: some Scene {
         WindowGroup {
             //Main()
-            Omnya()
+            Main()
         }
     }
 }

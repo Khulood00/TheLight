@@ -24,7 +24,7 @@ struct Omnya: View {
     var body: some View {
         ZStack{
             //Calling Background View:
-            Morningbackground()
+           Morningbackground()
             
             /*NOTE: Circles Views aarrnged from outter to inner:*/
             
