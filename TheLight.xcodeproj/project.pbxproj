@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A2593D43296F40650098C6CC /* DoneSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A2593D42296F40650098C6CC /* DoneSound.mp3 */; };
 		A2B08C4B296D483B00CE0AC9 /* Omnya.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B08C4A296D483B00CE0AC9 /* Omnya.swift */; };
 		A2B08C4D296D488100CE0AC9 /* AllModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B08C4C296D488100CE0AC9 /* AllModifiers.swift */; };
 		A2B08C50296D48FA00CE0AC9 /* 10secMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A2B08C4F296D48F900CE0AC9 /* 10secMusic.mp3 */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A2593D42296F40650098C6CC /* DoneSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = DoneSound.mp3; sourceTree = "<group>"; };
 		A2B08C4A296D483B00CE0AC9 /* Omnya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Omnya.swift; sourceTree = "<group>"; };
 		A2B08C4C296D488100CE0AC9 /* AllModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllModifiers.swift; sourceTree = "<group>"; };
 		A2B08C4F296D48F900CE0AC9 /* 10secMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 10secMusic.mp3; sourceTree = "<group>"; };
@@ -50,6 +52,7 @@
 			children = (
 				A2B08C4F296D48F900CE0AC9 /* 10secMusic.mp3 */,
 				A2B08C51296D4C3C00CE0AC9 /* 1minMusic.mp3 */,
+				A2593D42296F40650098C6CC /* DoneSound.mp3 */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A853694A296AB5850066912B /* Preview Assets.xcassets in Resources */,
+				A2593D43296F40650098C6CC /* DoneSound.mp3 in Resources */,
 				A8536956296BFDDA0066912B /* Localizable.strings in Resources */,
 				A2B08C52296D4C3C00CE0AC9 /* 1minMusic.mp3 in Resources */,
 				A8536946296AB5850066912B /* Assets.xcassets in Resources */,
