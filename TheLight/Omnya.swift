@@ -32,7 +32,7 @@ struct Omnya: View {
     var body: some View {
         ZStack{
             //Calling Background View:
-           Morningbackground()
+         //  Morningbackground()
             
             /*NOTE: Circles Views aarrnged from outter to inner:*/
             
@@ -84,7 +84,7 @@ struct Omnya: View {
                         .transition(.scale)
                         .opacity(HideExeImg ? 0 : 1)
                         .onAppear(){
-                            randNum = Int.random(in: 0...10)
+                            randNum = Int.random(in: 0...6)
                             print(exeLabels[randNum])
                         }
                         

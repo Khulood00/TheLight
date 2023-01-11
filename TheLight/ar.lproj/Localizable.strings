@@ -1,11 +1,10 @@
-/* 
+/*
   Localizable.strings
   TheLight
 
   Created by Khulood Alhamed on 09/01/2023.
   
 */
-
 "Schedule time to exercise" = "حدد وقت ممارسة الرياضة";
 "Evning   " = "المساء";
 "Morning" = "الصباح";
@@ -24,4 +23,3 @@
 "Exercise Stand on the floor using one leg and raise other one with your knee bent and straighten one of your arms and bend the other to make it touch your hip" ="قف على الارض باستخدام ساق واحدة وقم برفع الاخرى مع ثنى ركبتك و افرد احد ذراعيك و اثني الاخر لجعله ملامس لوركك";
 "Exercise Stand on the floor with one leg and bent the other one backward, holding your foot with one hand and the other one straight forward" = "قف على الارض باستخدام ساق واحدة وقم بثني الأخرى للخلف ممسكاً قدمك باحدى يديك و الاخرى مفرودة للأمام";
 "Exercise Lie facing the floor and place your elbows on the floor to raise your body while your toes touching the floor" = "استلق مواجهاً الأرض و قم بتثبيت كوعيك علي الارض لرفع جسمك مع جعل اصابع قدمك ملامسة للارض";
-

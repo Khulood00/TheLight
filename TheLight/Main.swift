@@ -4,7 +4,6 @@
 //
 //  Created by Khulood Alhamed on 08/01/2023.
 //
-
 import SwiftUI
 // Local notification
 import UserNotifications
@@ -47,7 +46,7 @@ struct Main: View {
         
         NavigationView{
             ZStack(alignment: .top){
-                
+            
                 Image(isNight ? "nightBackground" : "morningBackground")
                     .ignoresSafeArea()
                     .scaledToFill()
