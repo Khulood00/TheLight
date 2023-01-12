@@ -4,11 +4,15 @@
 <h3><img align="left" width="100" height="100" src="LogoIcon.png"> <br/> Flexy  <br/>
 </h3>   
   </div>   
+<br>
+<br>
+
+
 
 
 # Overveiw
 Flexy is an inclusive IOS app that gives the user the encourage the users to exercise daily by giving them the ability to schedule morning and evening notifications time based on their preference to have 1 min stretching and flexibility exercise. The exercises are randomly generated each time the app is used. Flexy supports vision disability by supporting voice over and reduce motion features. It also supports both English and Arabic language. 
-### Big Idea
+# Big Idea
 Inclusion.
 
 # Challenge Statement
@@ -28,7 +32,7 @@ A Reminder for Busy people who want to exercise daily so that they enhance their
 
 # Team
  #### The light
- <a href="https://www.linkedin.com/in/khulood-alhamed-73a837209/">Khulood Alhamed</a> Omnya Kamal<a href="https://www.linkedin.com/in/omnyakamal/">
+ <a href="https://www.linkedin.com/in/khulood-alhamed-73a837209/">Khulood Alhamed</a> - Omnya Kamal<a href="https://www.linkedin.com/in/omnyakamal/">
  
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
