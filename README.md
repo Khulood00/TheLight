@@ -1,7 +1,7 @@
 # TheLight
 <!-- PROJECT LOGO -->
 <div>
-<h3><img align="left" width="100" height="100" src="LogoIcon"> <br/> Flexy  <br/>
+<h3><img align="left" width="100" height="100" src="LogoIcon.png"> <br/> Flexy  <br/>
 </h3>   
   </div>   
 
