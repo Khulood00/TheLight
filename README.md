@@ -29,7 +29,8 @@ A Reminder for Busy people who want to exercise daily so that they enhance their
   </div>   
 
 # Challenge Summary
-
+<h3><img align="left" width="959" height="537" src="Summary.png">
+<br>
 # Team
  #### The light
  <a href="https://www.linkedin.com/in/khulood-alhamed-73a837209/">Khulood Alhamed</a> - Omnya Kamal<a href="https://www.linkedin.com/in/omnyakamal/">
