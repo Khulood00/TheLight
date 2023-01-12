@@ -11,22 +11,22 @@ Flexy is an inclusive IOS app that gives the user the encourage the users to exe
 ### Big Idea
 Inclusion.
 
-### Challenge Statement
+# Challenge Statement
 Make an inclusive solution that help a busy people.
 
-### Solution Concept
+# Solution Concept
 A Reminder for Busy people who want to exercise daily so that they enhance their lifestyle.
 
  # Technologies & Tools
 [![SwiftUI][SwiftUI-img]][SwiftUI-url]   [![Sketch][Sketch-img]][Sketch-url]   [![GitHub][GitHub-img]][GitHub-url]
 
-### Demo of your App
+# Demo of your App
 <a href="https://drive.google.com/file/d/1voRDPYBD59nTCgkxK2VCdDymXtrjr1hE/view?usp=share_link">Demo</a> <br/> <br/> </h3>   
   </div>   
 
-### Challenge Summary
+# Challenge Summary
 
-### Team
+# Team
  #### The light
  <a href="https://www.linkedin.com/in/khulood-alhamed-73a837209/">Khulood Alhamed</a> Omnya Kamal<a href="https://www.linkedin.com/in/omnyakamal/">
  
@@ -36,7 +36,7 @@ A Reminder for Busy people who want to exercise daily so that they enhance their
 [SwiftUI-url]: https://developer.apple.com/xcode/swiftui/
 [Sketch-img]: https://img.shields.io/badge/-Sketch-yellow
 [Sketch-url]: https://www.sketch.com
-[GitHub -img]: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
-[GitHub-url]: https://github.com/Khulood00/TheLight.git 
+[GitHub-img]: https://img.shields.io/badge/-GitHub-lightgrey
+[GitHub-url]: https://github.com/Khulood00/TheLight
 
 
