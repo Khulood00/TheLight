@@ -13,7 +13,7 @@
 
 
 # Overveiw
-Flexy is an inclusive IOS app that gives the user the encourage the users to exercise daily by giving them the ability to schedule morning and evening notifications time based on their preference to have 1 min stretching and flexibility exercise. The exercises are randomly generated each time the app is used. Flexy supports vision disability by supporting voice over and reduce motion features. It also supports both English and Arabic language. 
+Flexy is an inclusive IOS app that gives the user the encouragement to exercise daily by giving them the ability to schedule morning and evening notifications time based on their preference to have 1 min stretching and flexibility exercise. The exercises are randomly generated each time the app is used. Flexy supports vision disability by supporting voice over and reduce motion features. It also supports both English and Arabic language. 
 # Big Idea
 Inclusion.
 
