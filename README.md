@@ -27,7 +27,7 @@ A Reminder for Busy people who want to exercise daily so that they enhance their
 [![SwiftUI][SwiftUI-img]][SwiftUI-url]   [![Sketch][Sketch-img]][Sketch-url]   [![GitHub][GitHub-img]][GitHub-url]
 
 # Demo of your App
-<a href="https://drive.google.com/file/d/1voRDPYBD59nTCgkxK2VCdDymXtrjr1hE/view?usp=share_link">Demo</a> <br/> <br/> </h3>   
+<a href=" ">Demo</a> <br/> <br/> </h3>   
   </div>   
 
 # Challenge Summary
