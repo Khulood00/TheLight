@@ -9,11 +9,21 @@ import SwiftUI
 struct TheEndTextModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
-       //     .bold()
+      //.bold()
             .font(.system(size: 28))
             .foregroundColor(.black)
             .frame(width: 300.0)
             .transition(.scale)
+    }
+}
+struct notificationText: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+      //.bold()
+            .font(.system(size: 22))
+            .foregroundColor(.black)
+           // .frame(width: 300.0)
+           // .transition(.scale)
     }
 }
 struct TimerModifier: ViewModifier {

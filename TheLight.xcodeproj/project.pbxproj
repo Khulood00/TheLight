@@ -18,6 +18,7 @@
 		A853694A296AB5850066912B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8536949296AB5850066912B /* Preview Assets.xcassets */; };
 		A8536951296B45FC0066912B /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8536950296B45FC0066912B /* Main.swift */; };
 		A8536956296BFDDA0066912B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A8536958296BFDDA0066912B /* Localizable.strings */; };
+		A88D3B9B296FFE0D00955069 /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88D3B9A296FFE0D00955069 /* Splash.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		A8536949296AB5850066912B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A8536950296B45FC0066912B /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		A8536959296BFE240066912B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A88D3B9A296FFE0D00955069 /* Splash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				A2B08C4C296D488100CE0AC9 /* AllModifiers.swift */,
 				A8536945296AB5850066912B /* Assets.xcassets */,
 				A8536947296AB5850066912B /* TheLight.entitlements */,
+				A88D3B9A296FFE0D00955069 /* Splash.swift */,
 				A8536948296AB5850066912B /* Preview Content */,
 				A8536958296BFDDA0066912B /* Localizable.strings */,
 			);
@@ -177,6 +180,7 @@
 				A8536951296B45FC0066912B /* Main.swift in Sources */,
 				A8536944296AB5830066912B /* ContentView.swift in Sources */,
 				A2B08C4B296D483B00CE0AC9 /* Omnya.swift in Sources */,
+				A88D3B9B296FFE0D00955069 /* Splash.swift in Sources */,
 				A8536942296AB5830066912B /* TheLightApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,7 +331,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.6;
@@ -365,7 +369,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.6;

@@ -7,10 +7,10 @@
 import SwiftUI
 // Local notification
 import UserNotifications
-
+import Accessibility
 class NotificationManager{
     static let instance = NotificationManager()
-   
+    
     func scheduleNotification(hour: Int,minute: Int){
         
         let center = UNUserNotificationCenter.current()
@@ -36,18 +36,14 @@ class NotificationManager{
     }
 }
 // Local notification end
-
 struct Main: View {
     @State var currentTimeA = Date()
     @State var isNight = true
-    
-    
     var body: some View {
         
         NavigationView{
             ZStack(alignment: .top){
-            
-                Image(isNight ? "nightBackground" : "morningBackground")
+              Image(isNight ? "nightBackground" : "morningBackground")
                     .ignoresSafeArea()
                     .scaledToFill()
                 
@@ -57,19 +53,26 @@ struct Main: View {
                         VStack{
                             HStack{
                                 Image(systemName: "sun.max.fill")
+                                    .accessibilityHidden(true)
                                 Text("Morning")
+                                    .modifier(notificationText())
                                 DatePicker("", selection: $currentTimeA,displayedComponents: .hourAndMinute)
                                     .labelsHidden()
                                     .accentColor(.blue)
-                                
+                                    .accessibilityLabel("Morning")
+                                    .accessibilityHint("Chose the reminder time")
                             }
                             HStack{
                                 Image(systemName: "moon.fill")
+                                    .accessibilityHidden(true)
                                 Text("Evning   ")
+                                    .modifier(notificationText())
                                 
                                 DatePicker("", selection: $currentTimeA,displayedComponents: .hourAndMinute)
                                     .labelsHidden()
                                     .accentColor(.blue)
+                                    .accessibilityLabel("Evning")
+                                    .accessibilityHint("Chose the reminder time")
                             }
                             Button("Schedule Notification"){
                                 let components = Calendar.current.dateComponents([.hour , .minute], from: currentTimeA)
@@ -82,8 +85,11 @@ struct Main: View {
                                 
                                 NotificationManager.instance.scheduleNotification(hour: hours, minute: minute)
                                 
-                            } .buttonStyle(.bordered)
+                            }.buttonStyle(.bordered)
+                                
                             
+                                .accessibilityLabel("Schedule Notification")
+                              
                             
                         }.padding(.top, 20)
                     }
@@ -91,6 +97,9 @@ struct Main: View {
                     VStack{
                         HStack{
                             Text("Schedule time to exercise")
+                                .modifier(notificationText())
+                            
+                                .accessibilityLabel("Schedule time to exercise")
                         }
                     }
                 }
@@ -107,22 +116,19 @@ struct Main: View {
                     .foregroundColor(.black)
                     .cornerRadius(8)
                     .padding(.bottom, 550)
-                    .padding(.leading)
-                    .padding(.trailing)
+                    .padding(.leading, 20)
+                    .padding(.trailing,20)
                     .padding(.top, 100)
                     .opacity(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/)
-                
-                
-                
                 VStack{
                     Omnya()
-                }.padding(.top, 315)
+                }
+                // .padding(.top, 300)
             }
         }.onAppear{
             checkTime ()
         }
     }
-    
     func checkTime ()
     {
         self.currentTimeA = Date()
@@ -138,7 +144,7 @@ struct Main: View {
         if dateString == "AM"
         {
             self.isNight = false
-            
+
         }
         else
         {
@@ -146,7 +152,6 @@ struct Main: View {
         }
     }
 }
-
 struct Main_Previews: PreviewProvider {
     static var previews: some View {
         Main()

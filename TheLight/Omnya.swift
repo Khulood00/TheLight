@@ -8,14 +8,13 @@
 import SwiftUI
 import AVFoundation
 import Accessibility
-
 struct Omnya: View {
     //__________Used Variables__________//
     @Environment(\.accessibilityReduceMotion) var reduceMotion
     @State var isClicked = false //To check if the Tab to start button is clicked or not
     @State var HideStartButton = false
     @State var player: AVAudioPlayer? //This is used with playAudioWithDelay() func
-    @State var countDownTimer = 10 //countDownTimer -> starting the count down from the assigned value.
+    @State var countDownTimer = 60 //countDownTimer -> starting the count down from the assigned value.
     @State private var HideExeImg = false // To show and hide exercise img
     // @State var player: AVAudioPlayer! //This is used when playing the sound immediatly when the button tapped.
     @State var isMusicPlayed = true
@@ -24,68 +23,60 @@ struct Omnya: View {
     //__________End of Variables__________//
     
     var body: some View {
-        ZStack{
-            //Calling Background View:
-         //  Morningbackground()
-            
-            /*NOTE: Circles Views aarrnged from outter to inner:*/
-            
-            if isClicked {
-                OuterAnimatedCircle()
-            }//To animate the outer circle only when clicking on the start button.
-            
-            //Circles views:
-            MiddleCircle()
-            InnerCircle()
-            //Tab to start button:
-            Button {
-                self.isClicked.toggle()
-                self.HideStartButton = true
-                self.isClicked = true
+        VStack{
+            ZStack{
                 
-                playAudioWithDelay()//This is to play beep sound after the countDown is done.
+                //Calling Background View:
+                // Morningbackground()
                 
-                //To play the music only when sart tabbed in the beginning:
-                //                if isMusicPlayed {
-                //                    let url = Bundle.main.url(forResource: "10secMusic", withExtension: "mp3")
-                //                    guard url != nil else {
-                //                        print("Not playing sound")
-                //                        return
-                //                    }//End of else.
-                //                    do{
-                //                        player = try AVAudioPlayer(contentsOf: url!)
-                //                        player?.play()
-                //                    } catch {
-                //                        print("Catch Error")
-                //                    }//End of catch.
-                //                }
-            } label: {
-                Text("Tab to start")
-                    .modifier(StartTextModifier())
-                    .opacity(HideStartButton ? 0 : 1)
-                    .transition(.scale)
-                    .accessibilityLabel("Tab to start")
-            }//End of Button & label
-            
-            //Showing exercise Img:
-            if isClicked{
-                //ForEach(1...3, id: \.self) { i in
-                //Image("yoga" + String(randNum),
-                     // label: Text("Excercise"))
+                /*NOTE: Circles Views aarrnged from outter to inner:*/
                 
-                    Image(exeImages[randNum])
-                        .resizable()
-                        .frame(width: 170.0, height: 170.0)
+                if isClicked {
+                    OuterAnimatedCircle()
+                }//To animate the outer circle only when clicking on the start button.
+                
+                //Circles views:
+                MiddleCircle()
+                InnerCircle()
+                //Tab to start button:
+                Button {
+                    self.isClicked.toggle()
+                    self.HideStartButton = true
+                    self.isClicked = true
+                    
+                    playAudioWithDelay()//This is to play beep sound after the countDown is done.
+                    
+                    //To play the music only when sart tabbed in the beginning:
+                    //                if isMusicPlayed {
+                    //                    let url = Bundle.main.url(forResource: "10secMusic", withExtension: "mp3")
+                    //                    guard url != nil else {
+                    //                        print("Not playing sound")
+                    //                        return
+                    //                    }//End of else.
+                    //                    do{
+                    //                        player = try AVAudioPlayer(contentsOf: url!)
+                    //                        player?.play()
+                    //                    } catch {
+                    //                        print("Catch Error")
+                    //                    }//End of catch.
+                    //                }
+                } label: {
+                    Text("Tab to start")
+                        .modifier(StartTextModifier())
+                        .opacity(HideStartButton ? 0 : 1)
                         .transition(.scale)
-                        .opacity(HideExeImg ? 0 : 1)
-                        .onAppear(){
-                            randNum = Int.random(in: 0...6)
-                            print(exeLabels[randNum])
-                        }
-                        
-                        .accessibilityLabel(exeLabels[randNum])
-                        .accessibilityHidden(true)
-
+                        .accessibilityLabel("Tab to start")
+                }//End of Button & label
+                
+                //Showing exercise Img:
+                if isClicked{
+                    //ForEach(1...3, id: \.self) { i in
+                    //Image("yoga" + String(randNum),
+                    // label: Text("Excercise"))
+                    // To check if  ExerciseImg view should be hidden or not:
+                    if(!HideExeImg){ExerciseImg()}else{ExerciseImg().hidden()}
+                    
+                    
                     //_________Timer__________//
                     Text("\(countDownTimer)")
                         .onReceive(timer) { _ in
@@ -98,14 +89,13 @@ struct Omnya: View {
                             }
                             
                         }
-                        //.accessibilityLabel()
                         .accessibilityAddTraits(.updatesFrequently)
-                        //.accessibilityHidden(true)
-                        .opacity(isTimerRunning ? 0.50 : 0)
+                    //.accessibilityHidden(true)
+                        .opacity(isTimerRunning ? 0.70 : 0)
                         .modifier(TimerModifier())
                     
                 }//End of if isClicked
-            
+                
                 if HideExeImg {
                     VStack{
                         Text("Done!")
@@ -116,30 +106,15 @@ struct Omnya: View {
                             .accessibilityLabel("Have a nice day")
                         
                     }
-                    .accessibilityAddTraits(.updatesFrequently)
-                //.accessibilityHidden(true)
-                    .opacity(isTimerRunning ? 0.50 : 0)
-                    .modifier(TimerModifier())
-                
-            }//End of if isClicked
-            
-            if HideExeImg {
-                VStack{
-                    Text("Done!")
-                        .modifier(TheEndTextModifier())
-                        .accessibilityLabel("Done!")
-                    Text("Have a nice day")
-                        .modifier(TheEndTextModifier())
-                        .accessibilityLabel("Have a nice day")
-                    
                 }
-            }
-            
-        }//End of Zstack
-        
+                
+            }//End of Zstack
+        }.frame(width: 310, height: 310)
+           
+            .padding(.top, 340)
     }//End of body
     
-    //This 2 function together to play audio with delay but does not work:
+    //This 2 function together to play audio with delay:
     func playAudioWithDelay()
     {
         let file = Bundle.main.url(forResource: "DoneSound", withExtension: "mp3")
