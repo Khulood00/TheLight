@@ -33,7 +33,7 @@ A Reminder for Busy people who want to exercise daily so that they enhance their
   </div>   
 
 # Challenge Summary
-<h3><img align="left" width="959" height="526" src="ChSummary.png">
+<h3><img align="left" src="ChSummary.png">
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
