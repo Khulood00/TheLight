@@ -43,6 +43,7 @@ struct Main: View {
         
         NavigationView{
             ZStack(alignment: .top){
+                
               Image(isNight ? "nightBackground" : "morningBackground")
                     .ignoresSafeArea()
                     .scaledToFill()

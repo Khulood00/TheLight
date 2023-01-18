@@ -9,6 +9,8 @@ import SwiftUI
 import AVFoundation
 import Accessibility
 struct Omnya: View {
+   
+
     //__________Used Variables__________//
     @Environment(\.accessibilityReduceMotion) var reduceMotion
     @State var isClicked = false //To check if the Tab to start button is clicked or not
@@ -19,6 +21,8 @@ struct Omnya: View {
     // @State var player: AVAudioPlayer! //This is used when playing the sound immediatly when the button tapped.
     @State var isMusicPlayed = true
     @State var isTimerRunning = true
+    @State var currentTimeA = Date()
+    @State var isNight = true
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect() //.autoconnect() to start the timer automatically.
     //__________End of Variables__________//
     
@@ -87,7 +91,7 @@ struct Omnya: View {
                                 HideExeImg = true
                                 isMusicPlayed = false
                             }
-                            
+                            checkTime ()
                         }
                         .accessibilityAddTraits(.updatesFrequently)
                     //.accessibilityHidden(true)
@@ -144,24 +148,63 @@ struct Omnya: View {
             player?.play()
         }
     }
+    func checkTime ()
+   
+    {
+   
+        
+        self.currentTimeA = Date()
+        self.isNight = isNight
+
+        let currentDate = Date()
+        let dateFormatter = DateFormatter()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "a"
+        let dateString = formatter.string(from: Date())
+        print("the time now is \(dateString)")
+
+        if dateString == "AM"
+        {
+            self.isNight = false
+
+        }
+        else
+        {
+            self.isNight = true
+        }
+    }
+    
+   
+    
 }//End of main View
 
 struct Omnya_Previews: PreviewProvider {
+   
     static var previews: some View {
         Omnya()
     }
+    
 }
 
 
 //All the structs that are used:
 struct OuterAnimatedCircle: View{
+    @State var currentTimeA = Date()
+    @State var isNight = true
     @State private var animate = false
     @Environment(\.accessibilityReduceMotion) var reduceMotion
     //First Circle "Animated":
     var body: some View{
         // NOTE: Accessibility reduceMotion is implemented here, to test it you should go to the simulator then accessibility then turn on reduceMotion and then it will work.
         // NOTE: ReduceMotion means we will not having animation for the outer circle that is useful for hyperactive people.
-        Circle().fill(Color("MorningCircle"))
+        
+//        Circle()(isNight ? "MorningCircle" : "NightCircle")
+//              .ignoresSafeArea()
+//              .scaledToFill()
+        
+        
+        Circle()
+            .fill(isNight ? Color("MorningCircle") : Color("NightCircle"))
             .frame(width: 250, height: 250)
             .scaleEffect(animate ? 1.4 : 1.2)
             .animation(reduceMotion ? nil : .easeInOut(duration: 1) .repeatCount(60, autoreverses: true))// (duration: 1) --> Means each animation is for 1 sec and .repeatCount(60, autoreverses: true) --> repeat for 60 times means a total of 60 sec , autoreverses: true --> means repeat automatically.
@@ -170,6 +213,8 @@ struct OuterAnimatedCircle: View{
             }
             .opacity(0.25)
     }
+   
+    
 }
 struct MiddleCircle: View{
     //Second Circle:

@@ -27,14 +27,43 @@ struct notificationText: ViewModifier {
     }
 }
 struct TimerModifier: ViewModifier {
+    @State var currentTimeA = Date()
+    @State var isNight = true
     func body(content: Content) -> some View {
         content
             .font(.system(size: 50 , weight: .bold))
-            .foregroundColor(.black)
+            .foregroundColor(isNight ? Color.white : Color.black)
             .padding(.top, 400.0)
             .transition(.scale)
+            .onAppear{
+                checkTime()
+          
+    }
+    }
+    func checkTime ()
+    {
+        self.currentTimeA = Date()
+        self.isNight = isNight
+        
+        let currentDate = Date()
+        let dateFormatter = DateFormatter()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "a"
+        let dateString = formatter.string(from: Date())
+        print("the time now is \(dateString)")
+        
+        if dateString == "AM"
+        {
+            self.isNight = false
+            
+        }
+        else
+        {
+            self.isNight = true
+        }
     }
 }
+
 struct StartTextModifier: ViewModifier {
     func body(content: Content) -> some View {
         content

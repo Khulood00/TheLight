@@ -16,22 +16,30 @@ struct Splash: View {
     @State var isActive:Bool = false
     @State private var size = 0.8
     @State private var opacity = 0.5
+    @State var currentTimeA = Date()
+    @State var isNight = true
 
     var body: some View {
+        
+        
         if isActive {
             Main()
+            
         }
         else{
             ZStack{
                 
-            Morning_background()
-
+                Image(isNight ? "nightBackground" : "morningBackground")
+                    .ignoresSafeArea()
+                    .scaledToFill()
+                
                 VStack{
                     
-                    Image("Logo")
-                        
                     
-  }
+                    Image("logoYellowShadow")
+                    
+                    
+                }
                 .scaleEffect(size)
                 .opacity(opacity)
                 .onAppear{
@@ -45,24 +53,54 @@ struct Splash: View {
                         self.isActive=true
                     }
                 }
+            }.onAppear{
+                checkTime ()
             }
+            
+            
         }
         
-       
-      
     }
+            
+            func checkTime ()
+            {
+                self.currentTimeA = Date()
+                self.isNight = isNight
+                
+                let currentDate = Date()
+                let dateFormatter = DateFormatter()
+                let formatter = DateFormatter()
+                formatter.dateFormat = "a"
+                let dateString = formatter.string(from: Date())
+                print("the time now is \(dateString)")
+                
+                if dateString == "AM"
+                {
+                    self.isNight = false
+                    
+                }
+                else
+                {
+                    self.isNight = true
+                }
+            }
+        
 }
 
-struct Morning_background: View{
-    //Backgroung Img:
-    var body: some View{
-        Image("morningBackground")
-            .ignoresSafeArea()
-            .scaledToFill()
-    }
-}
+
+
+//struct Morning_background: View{
+//    @State var currentTimeA = Date()
+//    @State var isNight = true
+//    //Backgroung Img:
+//    var body: some View{
+//      Text("")
+//    }
+    
+//}
 struct Splash_Previews: PreviewProvider {
     static var previews: some View {
         Splash()
     }
 }
+
